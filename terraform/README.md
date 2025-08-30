@@ -120,7 +120,7 @@ gsutil pap set enforced "gs://${BUCKET}"
 terraform {
   backend "gcs" {
     bucket = "tfstate-engaged-card-466414-h6-demo"  # your bucket name
-    prefix = "gke/state"                            # folder-like path for this workspace
+    prefix = "terraform/state"                      # folder-like path for this workspace
   }
 }
 ```
