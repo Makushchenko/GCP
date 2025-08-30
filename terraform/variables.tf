@@ -15,6 +15,12 @@ variable "GKE_MACHINE_TYPE" {
   description = "Machine type"
 }
 
+variable "GKE_DISK_SIZE_GB" {
+  type        = number
+  default     = 30
+  description = "Size of the disk attached to each node, specified in GB"
+}
+
 variable "GKE_NUM_NODES" {
   type        = number
   default     = 2
@@ -31,4 +37,10 @@ variable "GKE_POOL_NAME" {
   type        = string
   default     = "main"
   description = "GKE pool name"
+}
+
+variable "GKE_DELETION_PROTECTION" {
+  type        = bool
+  default     = true
+  description = "GKE deletion protection"
 }
